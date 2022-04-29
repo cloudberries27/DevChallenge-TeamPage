@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1,
+  maximum-scale=5"
+    />
+
+    <link rel="icon" href="devchallenges.png" />
+
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="https://devchallenges.io/"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Work+Sans&display=swap" rel="stylesheet">
+
+    <title>Team Page</title>
+
+    <style>
+      html, body{
+        width: 90%;
+        height: 100%;
+        margin: 0 auto;
+        font-family: 'Merriweather', serif;
+      }
+      footer, p{
+        font-family: 'Work Sans', sans-serif;
+      }
+      img{
+        width: 200px;
+      }
+      .container {
+        margin: auto;
+        max-width: 1440px;
+      }
+      .title-text{
+        display: flex;
+        justify-content: space-evenly;
+        margin: 1em 0;
+      }
+      .title-text p{
+        max-width: 500px;
+      }
+      .container .members {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        justify-items: center;
+      }
+
+      .container .members .col{
+        position: relative;
+        width: 225px;
+      }
+      .container .members .col .title {
+        text-transform: uppercase;
+        writing-mode: vertical-rl;
+        position: absolute;
+        right: 0;
+      }
+      .container .members .col:nth-child(3n + 2) {
+        margin-top: 50px;
+      }
+      footer{
+        width: 100%;
+        text-align: center;
+      }
+
+      @media all and (max-width: 1000px){
+        html,body{
+          width: 100%;
+        }
+        .container .members {
+          grid-template-columns: repeat(2, 1fr);
+          padding: 1em;
+          column-gap: 10px;
+        }
+        .container .members .col:nth-child(3n + 2) {
+          margin-top: unset;
+        }
+        .container .members .col:nth-child(even) {
+          margin-top: 50px;
+        }
+      }
+      @media all and (max-width: 750px){
+        .title-text{
+          flex-direction: column;
+          margin: 20px;
+        }
+      }
+      @media all and (max-width: 499px){
+        .container .members {
+          grid-template-columns: repeat(1, 1fr);
+        }
+        .container .members .col:nth-child(even) {
+          margin-top: unset;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <section class="title-text">
+          <h1>The creative crew</h1>
+          <p><strong>Who We Are</strong><br/>
+          We are a team of creatively diverse, driven, innovative individuals working in various locations from the world.
+          </p>
+      </section>
+      <section class="members">
+        <div class="col">
+          <span class="title">product owner</span>
+          <img src="photo1.png"/>
+          <p>Bill Mahoney</p>
+        </div>
+        <div class="col">
+          <span class="title">art director</span>
+          <img src="photo2.png"/>
+          <p>Saba Cabrera</p>
+        </div>
+        <div class="col">
+          <span class="title">tech lead</span>
+          <img src="photo3.png"/>
+          <p>Shae Le</p>
+        </div>
+        <div class="col">
+          <span class="title">ux designer</span>
+          <img src="photo4.png"/>
+          <p>Skylah Lu</p>
+        </div>
+        <div class="col">
+          <span class="title">developer</span>
+          <img src="photo5.png"/>
+          <p>Griff Richards</p>
+        </div>
+        <div class="col">
+          <span class="title">developer</span>
+          <img src="photo6.png"/>
+          <p>Stan John</p>
+        </div>
+      </section>
+    </div>
+    <footer>created by <a href="https://devchallenges.io/portfolio/cloudberries27" target="_blank" rel="noreferrer">@cloudberries27</a> - devchallenges.io </footer>
+  </body>
+</html>
